@@ -1,8 +1,3 @@
-
-
-
-
-
 function hello(){
 	console.log("How are you");
 }
