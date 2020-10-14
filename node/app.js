@@ -1,8 +1,18 @@
-const EventEmitter = require('events');
-const emitter = new EventEmitter();
+let p = new Promise((resolve, reject) =>{
 
+	let a =1+1;
+	if (a==2)
+	{
+		resolve("Success")
+	}
+	else{
+		reject("Failed")
+	}
 
-emitter.on('messageLogged', function(arg){
-	console.log('Listner Called' + arg);
-});
-emitter.emit('messageLogged', 'this is event data');
+})
+
+p.then((message)=>{
+	console.log(message)
+}).catch((message)=>{
+	console.log(message)
+})
