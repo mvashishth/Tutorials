@@ -6,7 +6,7 @@
 /* How to use? : Check the GitHub README
 /* v2.0.0
 /* ----------------------------------------------- */
-
+zeta='#ffffff'
 var pJS = function(tag_id, params){
 
   var canvas_el = document.querySelector('#'+tag_id+' > .particles-js-canvas-el');
@@ -20,20 +20,19 @@ var pJS = function(tag_id, params){
     },
     particles: {
       number: {
-        value: 400,
+        value: 100,
         density: {
           enable: true,
           value_area: 800
         }
       },
       color: {
-        value: '#fff'
+        value: zeta
       },
       shape: {
         type: 'circle',
         stroke: {
-          width: 0,
-          color: '#ffffff'
+          width: 0
         },
         polygon: {
           nb_sides: 5
@@ -67,7 +66,7 @@ var pJS = function(tag_id, params){
       line_linked: {
         enable: true,
         distance: 100,
-        color: '#fff',
+        color: '#f39233',
         opacity: 1,
         width: 1
       },
@@ -93,10 +92,6 @@ var pJS = function(tag_id, params){
         onhover: {
           enable: true,
           mode: 'grab'
-        },
-        onclick: {
-          enable: true,
-          mode: 'push'
         },
         resize: true
       },
@@ -1472,6 +1467,19 @@ function isInArray(value, array) {
 
 /* ---------- particles.js functions - start ------------ */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 window.pJSDom = [];
 
 window.particlesJS = function(tag_id, params){
@@ -1519,3 +1527,92 @@ window.particlesJS = function(tag_id, params){
 
 };
 
+
+particlesJS('particles-js',
+  
+  {
+    "particles": {
+      "number": {
+        "value": 50,
+        "density": {
+          "enable": true,
+          "value_area": 300
+        }
+      },
+      "shape": {
+        "type": "circle",
+        "stroke": {
+          "width": 0
+        },
+        "polygon": {
+          "nb_sides": 5
+        },
+        "image": {
+          "width": 100,
+          "height": 100
+        }
+      },
+      "opacity": {
+        "value": 0.5,
+        "random": false,
+        "anim": {
+          "enable": false,
+          "speed": 1,
+          "opacity_min": 0.1,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 5,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 40,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 6,
+        "direction": "none",
+        "random": false,
+        "straight": false,
+        "out_mode": "out",
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": false,
+          "mode": "repulse"
+        },
+        "onclick": {
+          "enable": false,
+          "mode": "push"
+        },
+        "resize": true
+      }
+     
+    },
+    "retina_detect": true
+ 
+  }
+
+);
+
+
+
+console.log("particle.js")
