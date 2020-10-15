@@ -6,7 +6,7 @@
 /* How to use? : Check the GitHub README
 /* v2.0.0
 /* ----------------------------------------------- */
-zeta='#ffffff'
+var zeta='#ffffff'
 var pJS = function(tag_id, params){
 
   var canvas_el = document.querySelector('#'+tag_id+' > .particles-js-canvas-el');
@@ -1613,6 +1613,3 @@ particlesJS('particles-js',
 
 );
 
-
-
-console.log("particle.js")
