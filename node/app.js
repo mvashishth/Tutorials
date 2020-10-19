@@ -1,18 +1,13 @@
-let p = new Promise((resolve, reject) =>{
+const fetch = require('node-fetch');
 
-	let a =1+1;
-	if (a==2)
-	{
-		resolve("Success")
-	}
-	else{
-		reject("Failed")
-	}
+let url = "https://www.reddit.com/r/popular.json";
 
-})
+let settings = { method: "Get" };
 
-p.then((message)=>{
-	console.log(message)
-}).catch((message)=>{
-	console.log(message)
-})
+fetch(url, settings)
+    .then(res => res.json())
+    .then((json) => {
+    	for (var i=0;i<25;i++){
+    	console.log(json.data.children[i].data.subreddit)
+    }
+    });

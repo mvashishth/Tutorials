@@ -1,8 +1,12 @@
 from bokeh.plotting import figure, output_file, show
+import numpy as np
 
 # prepare some data
-x = [1, 2, 3, 4, 5]
-y = [6, 7, 2, 4, 5]
+x = np.linspace(0,10,20)
+A=-2
+B=2
+C=0
+y = A*np.multiply(x,x) + B*x +C
 
 # output to static HTML file
 output_file("lines.html")
