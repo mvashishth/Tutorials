@@ -1,10 +1,10 @@
-import React from 'react';
-
+import React, {Component} from 'react';
+import Page from './Components/page.js'
 
 function App() {
   return (
-    <div className="App">
-
+    <div>
+    <Page name="Mayur"/>
     </div>
   );
 }
