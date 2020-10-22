@@ -4,7 +4,7 @@ import Page from './Components/page.js'
 function App() {
   return (
     <div>
-    <Page name="Mayur"/>
+    <Page name="Clark"/>
     </div>
   );
 }
